@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ópticas Exclusivas · Importaciones</title>
+<title>Importaciones</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -320,18 +320,18 @@ thead .sticky-left-1, thead .sticky-left-2, thead .sticky-left-3, thead .sticky-
   .field.span2{grid-column:span 1;}
 }
 
-/* ===== Estilos de los reportes en ventana (Resumen y Tiempos) ===== */
+/* ===== Estilos de los reportes en ventana ( y Tiempos) ===== */
 
 /* ---------- REPORTES EN VENTANA ---------- */
-.resumen-layout{display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap;}
-.resumen-table-wrap{flex:1 1 400px; max-height:460px; overflow:auto; border:1px solid var(--line); border-radius:14px;}
-table.resumen-table{width:100%; border-collapse:collapse; font-size:13.5px;}
-.resumen-table th{
+.-layout{display:flex; gap:30px; align-items:flex-start; flex-wrap:wrap;}
+.-table-wrap{flex:1 1 400px; max-height:460px; overflow:auto; border:1px solid var(--line); border-radius:14px;}
+table.-table{width:100%; border-collapse:collapse; font-size:13.5px;}
+.-table th{
   position:sticky; top:0; background:var(--teal-100); color:var(--teal-900);
   font-family:'Manrope',sans-serif; font-size:11px; font-weight:700; letter-spacing:.06em;
   text-transform:uppercase; text-align:left; padding:10px 14px; border-bottom:1px solid var(--line);
 }
-.resumen-table td{padding:10px 14px; border-bottom:1px solid var(--line); white-space:nowrap; color:var(--ink);}
+.-table td{padding:10px 14px; border-bottom:1px solid var(--line); white-space:nowrap; color:var(--ink);}
 .resumen-table tbody tr:nth-child(even){background:#fbfcfb;}
 .resumen-pie-wrap{flex:0 0 250px; display:flex; flex-direction:column; align-items:center; gap:20px;}
 /* gráfica circular: el fondo (conic-gradient) y las etiquetas se generan desde js/graficas.js */
@@ -584,15 +584,15 @@ canvas.rojas-canvas{width:100%; height:auto; display:block; border:1px solid var
       <button class="pill-btn dark" id="btnImportar">Importar</button>
       <input type="file" id="fileImportar" accept=".xlsx,.xls" style="display:none;">
       <button class="pill-btn dark" id="btnExportar">Exportar</button>
-      <button class="pill-btn" id="btnResumen">Resumen<br>Transportes</button>
+      <button class="pill-btn" id="btnResumen">Resumen de<br>Transportes</button>
       <button class="pill-btn" id="btnCajas">Cajas<br>Dañadas</button>
-      <button class="pill-btn" id="btnTiempos">Tiempos<br>importación</button>
-      <button class="pill-btn" id="btnContab">Entrega<br>contabilidad</button>
+      <button class="pill-btn" id="btnTiempos">Tiempos de<br>Importación</button>
+      <button class="pill-btn" id="btnContab">Entrega a<br>Contabilidad</button>
       <button class="pill-btn more" id="btnMas" title="Más reportes" aria-label="Más reportes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
     </div>
     <div class="extras" id="extras">
       <button class="pill-btn" id="btnRojas">Pólizas<br>rojas</button>
-      <button class="pill-btn" id="btnFinMes">Fin Mes<br>importaciones</button>
+      <button class="pill-btn" id="btnFinMes">Fin de mes<br>Importaciones</button>
     </div>
     </div>
   </div>
@@ -601,7 +601,7 @@ canvas.rojas-canvas{width:100%; height:auto; display:block; border:1px solid var
     <div class="sidebar">
       <h2>Resumen del mes</h2>
       <div class="stat"><div class="stat-label">Importaciones</div><div class="stat-value" id="statTotal">0</div></div>
-      <div class="stat"><div class="stat-label">Lentes oftálmicos</div><div class="stat-value" id="statLentes">0</div></div>
+      <div class="stat"><div class="stat-label">Lentes oftálmicos (CR)</div><div class="stat-value" id="statLentes">0</div></div>
       <div class="stat"><div class="stat-label">Selectivos verdes</div><div class="stat-value" id="statVerde">0</div></div>
       <div class="stat has-eye"><div><div class="stat-label">Selectivos rojos</div><div class="stat-value warn" id="statRojo">0</div></div><button type="button" class="stat-eye" id="eyeRojo" title="Mostrar solo los selectivos rojos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
       <div class="stat"><div class="stat-label">Importaciones en tiempo</div><div class="stat-value" id="statEnTiempo">0</div></div>
